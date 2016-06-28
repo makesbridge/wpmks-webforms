@@ -1,0 +1,437 @@
+<div class="mks-webform-wrapper">
+
+    <div class="mks-creat-listing-wrapper">
+   <div class="lp_name search-wrap"  style="float: right; width: 365px;margin-bottom: 5px;">
+             <div style="height:39px;float:left;width:324px;position:relative;" class="inputcont">
+                    <input type="text" id="search_form" class="field-text" maxlength="100" style="width: 340px; padding-bottom: 8px; padding-top: 8px; position: relative; top: -1px;" placeholder="Search form by name">
+                    <a style="" id="clearsearch" class="close-icon"></a>
+                </div>
+                <!-- <a class="btn-blue g-btn search-button"><span class="icon-search icon-white"></span></a> -->
+               <button id="searchbtn" class="searchbtn" tabindex="-1"><span class="icon-search icon-white">                </span></button>
+   </div>
+   <h2 class="h2-count" id="total_templates"><strong class="badge">0</strong><b>Forms </b></h2>
+   <div class="create_new">
+                <span>Create Signup Form</span>
+            </div>
+<div class="mks-webform-listings" style="">
+
+    <div class="loading"><p style="">Loading...</p></div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+    </table>
+</div>
+       </div>
+<div class="campaign-content" style="padding:0px 20px 10px 0;position:relative;">
+  <a class="backlist mks-back-listing-btn"><span style="min-width: 40px;"> Back to Signup forms list</span></a>
+
+            <div class="topbar-fixed">
+              <div class="topbar-wrapper">
+                <div style="margin-top:0;" class="btns">
+                    <a id="wpcsvupload" title="Click to download contacts" style="display:none;" class="btn-blue left showtooltip"><i class="icon contactcsv24"></i></a>
+                    <a id="formlink" title="Form Links" class="btn-blue left showtooltip"><i class="icon link24"></i></a>
+                    <a id="formcode" title="Embed Code" class="btn-blue left showtooltip"><i class="icon embed24"></i></a>
+                    <a id="wpshortcode" title="Short Code" style="display:none;" class="btn-blue left showtooltip"><i class="icon shortcode24"></i></a>
+                    <a id="previewurldb" title="Preview form" class="btn-blue left showtooltip preview-form previewurldb"><i class="icon preview24"></i></a>
+                    <a id="setting_form" class="btn-blue left "><span>Form Settings</span><i class="icon setting"></i></a>
+                    <a id="fwdsettingsbtn" class="btn-blue left "><span>Forward Settings</span><i class="icon form"></i></a>
+
+                </div>
+                <div style="margin-top:0;" class="btns left">
+                    <span class="namelabel">Form Name: </span><input type=text id="fname" name="formName" value="" maxlength="50" style="width:250px;line-height: 20.5px;float:left;" size="50" />
+                    <a  class="btn-green right save-form"><span>Save</span><i class="icon check"></i></a>
+
+                </div>
+                <div class="alert alert-error nolist" style="display:none">
+                      <strong>Oh snap!</strong> Target list is missing for this form.
+                 </div>
+               </div>
+            </div>
+            <!--- REMOVE DATA -->
+            <div class="header" style="display:none">
+                Form Builder
+                <div class="header-btns">
+                    <input type="hidden" id="plg-src-path" value="" />
+                    <input type="hidden" id="admin-src-path" value="" />
+                    <select id="mid_sel" name="mid" class="form_loader chzn-select" data-placeholder="Choose a Form to load..." style="width:300px" >
+                        <option value=""></option>
+
+
+
+                    </select>
+                    <button class="toolbarbtn" id="loadformbtn">load form</button>
+                    <button class="toolbarbtn" id="newformbtn">new form</button>
+                </div>
+            </div>
+            <div class="subheader" style="display:none">
+                <div class="formname"></div>
+                <div class="toolbar" >
+                    <a id="preview_form">preview</a>
+                    <a id="target_form">target lin</a>
+                    <a id="embed_form">embed Code</a>
+                    <a id="update_form">update landing page</a>
+                    <a id="deleteformbtn">delete form</a>
+                    <a id="save_form">save</a>
+                    <a id="closebtn">close</a>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <!---  END REMOVE DATA -->
+
+            <div class="autosave label label-info">
+                Auto Saving...
+            </div>
+            <div class="csvg label label-info">
+                Generating CSV...
+            </div>
+
+            <div class="contents" style="visibility: hidden;margin-top:10px">
+              <div id="formtabs" style="">
+                <ul>
+                    <li><a href="#tabs-1" id="formbuilder_tab">Form Builder</a></li>
+                    <li><a href="#tabs-2" id="setting_tab">Form Settings</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <!--Start of builder area-->
+                    <div class="subtoolbar">
+                        <a id="setting_form" class="setting_button">Form Settings</a>
+
+                    </div>
+                    <div class="contentRow">
+                        <div class="leftbar-container">
+                        <div class="leftbar" style="top:50px;">
+                            <div id="accordion-form" onselectstart="return false;" unselectable="on">
+                                <h3 style="margin-top:0px">Layout</h3>
+                                <ul>
+                                    <li id="html_heading" class="dragme showtooltipd" title="Drag">Heading</li>
+                                    <li id="html_text" class="dragme showtooltipd"  title="Drag">Text</li>
+                                    <li id="html_break" class="dragme showtooltipd"  title="Drag">Line Break</li>
+                                    <li id="html_hr" class="dragme showtooltipd"  title="Drag">Horizontal Rule</li>
+                                    <li id="html_captcha" class="dragme showtooltipd"  title="Drag">Captcha</li>
+                                    <li id="html_submit" class="dragme showtooltipd"  title="Drag">Submit button</li>
+                                </ul>
+
+                                <h3>Basic Fields</h3>
+                                <ul id="fieldList" style="display:none">
+                                    <div class="accordianbar">
+                                        <div>
+                                            <div class="search">
+                                                <input type="text" class="serachList" name="" value="" data-search="fieldList">
+                                                <a style="display: none" class="close-icon clearsearch"></a>
+                                                <a class="search searchBBLink">
+                                                    <i class="icon search"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </ul>
+
+                                <h3>Custom Fields</h3>
+                                <ul id="customFieldList">
+                                   <div class="accordianbar">
+                                        <div>
+                                            <div class="search">
+                                                <input type="text" class="serachList" name="" value="" data-search="customFieldList">
+                                                <a style="display: none" class="close-icon clearsearch"></a>
+                                                <a class="search searchBBLink" style="">
+                                                    <i class="icon search" ></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <li id="frmFld_customField" class="dragme">New Custom Field</li>
+
+
+
+                                </ul>
+
+                               <h3>Lists</h3>
+                               <ul id="mailLists">
+                                    <div class="accordianbar">
+                                        <div>
+                                            <div class="search">
+                                                <input type="text" class="serachJList" name="" value="">
+                                                <a style="display: none" class="close-icon clearJsearch"></a>
+                                                <a class="search searchBBLink">
+                                                    <i class="icon search"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </ul>
+
+                               <h3 class="salesforce_a">Add to Salesforce <div class="salesforce_icon"></div></h3>
+                               <ul class="salesforce_a">
+                                   <li class="salesforce">
+                                       <div class="div-salesforce">
+                                        <div>
+                                            <div><label style="float:left;"><input type="checkbox" id="salesforce_checkbox" /> Add as </label><select name="salesforce" disabled="disabled" style="width:146px"><option value="1">Lead</option><option value="2">Contact</option></select></div>
+                                        </div>
+                                       </div>
+                                   </li>
+                                </ul>
+
+                            </div>
+                            <div id="accordion-form2" onselectstart="return false;" unselectable="on">
+
+                                <h3>Sales Assignment</h3>
+                                <ul>
+                                   <li id="salesRepItem">Sales Rep:&nbsp;
+                                    <select id="salesRepPicker" name="salesRep" style="width:177px" data-placeholder="Select Sale Rep">
+                                    <option value="">Select sales rep</option>
+
+
+                                    </select>
+                                    <a id="sales_assignment_btn" title="Assign form submissions to this Sales Rep"></a>
+                                   </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        </div>
+                        <div class="formarea">
+                            <div class="formareacontents">
+                                <div id="emptyContents" class="nocontent div-zone" style="width:412px;display: block;">
+                                    <div class="empty-text">Drop element here</div>
+                                </div>
+                                 <ul id="formheader">
+
+                                </ul>
+                                <ul id="formcontents" class="startform" style="display:none;">
+
+                                </ul>
+                                <ul id="formfooter">
+
+                                </ul>
+                            </div>
+                        </div>
+
+                   </div>
+
+
+                    <!--End of builder area-->
+                </div>
+                <div id="tabs-2">
+
+                </div>
+
+               </div>
+            </div>
+        </div>
+        <form method="post" id="form_builder_form" action="/pms/landingpages/rFormSaver.jsp?ukey=&BMS_REQ_TK=">
+        <input id="mformId" type=hidden name="mformId" value="">
+        <input id="mpageId" type=hidden name="mpageId" value="">
+        <input id="mIsCAPTCHA" type=hidden name="mIsCAPTCHA" value="">
+        <input id="mformName" type=hidden name="mformName" value="">
+        <input id="mformType" type=hidden name="mformType" value="">
+         <input id="source" type=hidden name="source" value="">
+        <input id="sfEntity" type=hidden name="sfentity" value="">
+        <input id="isSalesforce" type=hidden name="isSalesforce" value="">
+
+        <textarea id="mformHTML" name="mformHTML" style="display:none"></textarea>
+      </form>
+<div id="elementProperties" title="Properties" style="display:none;z-index: 10002;">
+             <div class="windowcontent">
+                 <div id="prop-" style="display: inline-block;width:100%;">
+                    <div class="prop-tabs-table">
+                        <form class="form-horizontal" id="elementPropertiesform">
+                           <div id="basic_settings">
+
+
+                            </div>
+                            <a id="show_advance" class="advance_link"><i class="icon-plus-sign"></i>Show Advance Settings</a>
+                            <div id="advance_settings" style="display:none">
+
+                            </div>
+                            <input type="hidden" value="0" id="prp_type" />
+                        </form>
+                    </div>
+                 </div>
+         </div>
+       </div>
+
+       <div id="forwardSettings" title="Forward Settings" style="display:none;z-index: 10002;">
+             <div id="forwardSettingContainer">
+                        <form method="POST" action="rFormSettingSaver.jsp" name="mform">
+                                            <!-- <input type="hidden" value="true" name="isNewBuilder"> -->
+                                            <input type="hidden" value="35Xbbrtr" name="ukey">
+
+
+                                            <input type="hidden" value="zdTyioBh17Hk20Ik21Wp30zgytRf" name="formId">
+
+
+                                            <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+
+                                                <tbody><tr style="height:30px;"><td align="center" colspan="2" class="colorTd sectionHeader forwardTypeH vam">
+                                                    <input type="radio" id="F1" checked="" class="inputStyle" size="110" value="1" name="forwardType">
+                                                    &nbsp;Forward To URLs &nbsp;&nbsp;
+
+                                                    <input type="radio" id="F2"  class="inputStyle" size="110" value="2" name="forwardType">
+                                                    &nbsp;Forward To Friend &nbsp;&nbsp;
+
+                                                    <input type="radio" id="F3" class="inputStyle" size="110" value="3" name="forwardType">
+                                                    &nbsp;Forward To My HTML
+
+                                                </td></tr>
+
+                                                <tr><td colspan="2">&nbsp;</td></tr>
+
+                                                <tr id="surl"><td colspan="2" class="vam input-text">Success URL:<br>
+                                                    <input type="text" class="inputStyle " size="110" value="" name="successURL">
+                                                    <br>&nbsp;
+                                                </td></tr>
+
+
+                                                <tr id="furl"><td colspan="2" class="vam input-text">Failure URL:<br>
+                                                    <input type="text" class="inputStyle" size="110" value="" name="failureURL">
+                                                </td></tr>
+
+                                                <tr style="display:none;" id="mhtml"><td colspan="2" class="vam input-text">Paste your HTML here:&nbsp;&nbsp;
+                                                    <!-- <a href="javascript:eWebEditorPopUp('.myHTML');">[edit]</a> -->
+                                                    <br>
+                                                    <textarea name="myHTML" id=".myHTML" style="font-size:1.0em;" class="vam" cols="107" rows="5"></textarea>
+                                                </td></tr>
+
+                                                <tr style="display:none;" id="ftf"><td align="center" style="border:1px solid #EEE;padding:5px;" colspan="2" class="vam"><br><br>
+                                                    Subscriber will be presented with Forward To Friend page on successful Sign Up.<br><br>&nbsp;
+                                                </td></tr>
+
+                                                <tr><td colspan="2">&nbsp;</td></tr>
+
+                                                <tr style="height:30px;"><td colspan="2" class="colorTd sectionHeader vam">
+                                                    <input type="checkbox" value="Y" name="isAlert" id=".isAlert">
+                                                    &nbsp;Receive Alert Email For Sign Up
+                                                </td></tr>
+
+                                                <tr><td colspan="2">&nbsp;</td></tr>
+
+                                                <tr><td colspan="2" class="vam">At Email Address:<br>
+                                                    <input type="text" disabled="" class="inputStyle" size="70" value="" name="alertEmail" id=".alertEmail">
+                                                </td></tr>
+
+                                                <tr><td colspan="2">&nbsp;</td></tr>
+
+                                                <tr style="height:30px;"><td colspan="2" class="colorTd sectionHeader vam">
+                                                    <input type="checkbox" value="Y" name="isConfirmation" id=".isConfirmation">
+                                                    &nbsp;Send Confirmation Email To Signee</td></tr>
+
+                                                    <tr><td colspan="2">&nbsp;</td></tr>
+
+                                                    <tr><td colspan="2" class="vam">From:<br>
+                                                        <input type="text" disabled="" class="inputStyle" size="70" value="" name="confirmationEmail" id=".confirmationEmail">
+                                                    </td></tr>
+
+                                                    <tr><td colspan="2" class="vam"><br>
+                                                        Email Body:&nbsp;&nbsp;
+                                                        <!-- <a href="javascript:eWebEditorPopUp('.confirmationText');">[edit]</a> -->
+                                                        <br>
+                                                        <textarea disabled="" name="confirmationText" id=".confirmationText" style="font-size:1.0em;" class="vam" cols="107" rows="5">You have successfully subscribed to the services offered.</textarea>
+                                                    </td></tr>
+
+
+
+
+
+                                                </tbody></table>
+
+
+
+
+                </form>
+            </div><!-- ./forwardSettings-->
+       </div>
+       <div id="createNew" title="Enter name for your Signup form" style="display:none;z-index: 10002;">
+             <div>
+
+                 <div class="">
+                <div style="height:60px;float:left;width:500px;" class="inputcont ">
+                    <input type="text" class="field-text" maxlength="100" style="width:480px;height:35px;" placeholder="Enter form name here">
+                    <span class="errortext" style="display:none;"><i class="erroricon"></i><em>Form name cannot be empty</em></span>
+                </div>
+                <a class="btn-green g-btn create-button"><span style="min-width: 40px;"> Create </span><i class="icon next"></i></a>
+
+
+            </div>
+
+         </div>
+       </div>
+       <div id="embedcode" title="Embed Code" style="display:none;z-index: 10002;">
+             <div class="input-text">
+                 <div style="margin-bottom:10px;">Copy the snippet, and paste it in the page where you want the form to be visible:</div>
+
+                <textarea rows=1 style="padding:10px;width:558px;height:70px;color:#6666FF;" id='frmSnippet'>
+</textarea>
+
+         </div>
+       </div>
+    <div id="shortcode" title="Short Code" style="display:none;z-index: 10002;">
+             <div class="input-text">
+                 <div style="margin-bottom:10px;">Copy the snippet, and paste it in the page where you want the form to be visible:</div>
+
+                <textarea rows=1 style="padding:10px;width:558px;height:70px;color:#6666FF;" id='shortcodeSnippet'>
+</textarea>
+
+         </div>
+       </div>
+       <div id="embedRowcode" title="Embed Code" style="display:none;z-index: 10002;">
+             <div class="input-text">
+                 <div style="margin-bottom:10px;">Copy the snippet, and paste it in the page where you want the form to be visible:</div>
+
+                <textarea rows=1 style="padding:10px;width:558px;height:70px;color:#6666FF;" id='CodeSnippet'>
+</textarea>
+
+         </div>
+       </div>
+       <div id="shortRowcode" title="Short Code" style="display:none;z-index: 10002;">
+                <div class="input-text">
+                    <div style="margin-bottom:10px;">Copy the snippet, and paste it in the page where you want the form to be visible:</div>
+
+                   <textarea rows=1 style="padding:10px;width:558px;height:70px;color:#6666FF;" id='shortRowcodeSnippet'>
+   </textarea>
+
+            </div>
+          </div>
+
+       <div id="targetformurl" title="Form Links" style="display:none;z-index: 10002;">
+             <div>
+                <div style="margin-bottom:10px;font-weight:bold;font-size:13px;color: #414f58;">URL:</div>
+        <div class="input-text"><input type="text" name='' id="rowLink" value="" style="width:558px;" class="targeturl"></div>
+         </div>
+
+            <div>
+                <div style="margin-bottom:10px;font-weight:bold;font-size:13px;color: #414f58;">Iframe Snippet:</div>
+        <div class="input-text">
+                    <textarea rows=1 style="padding:10px;width:558px;height:70px;color:#6666FF;" id='frmIframeSnippetRow'><iframe src="" frameborder="0" style="width:400px;height:600px"></iframe></textarea>
+                </div>
+         </div>
+
+             <div style="margin-top:10px;">Copy iframe snippet, and paste it in the page where you want the form to be visible:</div>
+       </div>
+
+        <div id="previewformurl" title="Form Preview" style="display:none;z-index: 10002;">
+
+       </div>
+        <div id="previewsingleurl" title="Form Preview" style="display:none;z-index: 10002;">
+
+       </div>
+       <div id="targetcode" title="Form Links" style="display:none;z-index: 10002;">
+             <div>
+                <div style="margin-bottom:10px;font-weight:bold;font-size:13px;color: #414f58;">URL:</div>
+        <div class="input-text"><input type="text" name='' value="" style="width:558px;" class="targeturl"></div>
+         </div>
+
+            <div>
+                <div style="margin-bottom:10px;font-weight:bold;font-size:13px;color: #414f58;">Iframe Snippet:</div>
+        <div>
+                    <textarea rows=1 style="padding:10px;width:558px;height:70px;color:#6666FF;" id='frmIframeSnippet'><iframe src="" frameborder="0" style="width:400px;height:600px"></iframe></textarea>
+                </div>
+         </div>
+
+             <div style="margin-top:10px;">Copy iframe snippet, and paste it in the page where you want the form to be visible:</div>
+       </div>
+
+ </div>
